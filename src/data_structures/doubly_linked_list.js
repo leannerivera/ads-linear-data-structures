@@ -86,7 +86,7 @@ class DoublyLinkedList {
     // counter increases by 1
     // return count
     if (!this._head) return 0;
-    counter = 0
+    let counter = 0
     let current_node = this._head
     while (current_node._active) {
       counter ++
