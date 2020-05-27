@@ -8,7 +8,7 @@ class DLLQueue {
    * Create an empty queue
    */
   constructor() {
-    this.storage = new DoublyLinkedList();
+    this.storage = new DoublyLinkedList(); // can use methods from this class; edge cases should be in DLL class
   }
 
   /**
@@ -18,7 +18,8 @@ class DLLQueue {
    * @returns {ticket} Cancellation ticket
    */
   enqueue(element) {
-
+    // insert element -- DLL's insertTail
+    return this.storage.insertTail(element);
   }
 
   /**
@@ -28,7 +29,8 @@ class DLLQueue {
    * @returns Stored element
    */
   cancel(ticket) {
-
+    // DLL's remove
+    return this.storage.remove(ticket);
   }
 
   /**
@@ -37,7 +39,8 @@ class DLLQueue {
    * @returns Stored element
    */
   dequeue() {
-
+    // DLL's remove head
+    return this.storage.removeHead();
   }
 
   /**
@@ -46,7 +49,8 @@ class DLLQueue {
    * @returns {number} Current count
    */
   count() {
-
+    // DLL's count 
+    return this.storage.count();
   }
 
   /**
@@ -62,7 +66,8 @@ class DLLQueue {
    * @param {forEachCallback} callback Function to invoke
    */
   forEach(callback) {
-
+    //DLL's foreach
+    return this.storage.forEach(callback)
   }
 }
 
